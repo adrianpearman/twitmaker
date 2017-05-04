@@ -9,19 +9,27 @@ $(function(){
     e.preventDefault();
 
 // 3. submit the AJAX request to the server
+    // $.ajax({
+    //   url: $(this).attr('action'),
+    //   method: $(this).attr('method'),
+    //   data: $(this).serialize(),
+    //   dataType: 'html'
+    // }).done(function(data){
+    //   console.log('Submit was successful');
+    //   console.log(data);
+    // }).fail(function(){
+    //   console.log('Submit was unsuccessful');
+    // }).always(function(){
+    //
+    // });
     $.ajax({
-      url: $(this).attr('action'),
-      method: $(this).attr('method'),
-      data: $(this).serialize(),
-      dataType: 'html'
-    }).done(function(data){
-      console.log('Submit was successful');
-      console.log(data);
-    }).fail(function(){
-      console.log('Submit was unsuccessful');
-    }).always(function(){
-
-    });
+      url: ,
+      method: ,
+      data: ,
+      dataType:
+    }).done(function(response){
+      console.log(response);
+    })
   });
 
 
