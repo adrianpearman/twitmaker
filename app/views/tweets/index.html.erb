@@ -1,11 +1,17 @@
-<ul class="tweets">
-  <% @tweets.each do |tweet| %>
-    <li class="tweet">
-      <p><%= tweet.message %></p>
-      <time><%= tweet.created_at.strftime('%b %e, %l:%M %p') %></time>
-    </li>
-  <% end %>
-</ul>
+
+<!-- if value if not zero and tweets aren't empty -->
+ <%if @tweets != nil && !@tweets.empty? %>
+  <ul class="tweets">
+    <% @tweets.each do |tweet| %>
+
+    <!-- tweets partial created to allow new tweets to be added -->
+    <%= render tweet %>
+
+      <% end %>
+    </ul>
+    <% else %>
+   <h2>No Tweets</h2>
+<% end  %>
 
 <%= form_for @tweet do |f| %>
   <%= f.text_area :message, placeholder: "What did you learn today?" %>
